@@ -2,7 +2,10 @@
 
 @import '../../../../styles.scss';
 
+/* Navbar */
+
 .navbar {
+  font-family: $type1;
   font-weight: $font-weight-light;
   background: $navbar-bg;
 
