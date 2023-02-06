@@ -19,14 +19,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div *ngIf="user" id="userList">
-          <ul class="list-group pull-down" id="user-list">
+           <ul *ngIf="user" class="p-2 list-group pull-down">
             <li class="list-group-item">
               <app-user [user]="user"></app-user>
             </li>
           </ul>
-        </div>
-      </div>
+       </div>
     </div>
   </div>
 </div>
