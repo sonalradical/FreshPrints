@@ -1,0 +1,118 @@
+/* Navbar */
+
+@import '../../../../styles.scss';
+
+/* Navbar */
+
+.navbar {
+  font-family: $type1;
+  font-weight: $font-weight-light;
+  background: $navbar-bg;
+
+  .navbar-brand {
+    width: 200px;
+  }
+
+  .navbar-menu-wrapper {
+    color: $navbar-menu-color;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: calc(100% - #{$sidebar-width-lg});
+    height: $navbar-height;
+    box-shadow: 18px 1px 20px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 991px) {
+      width: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      flex-grow: 1;
+    }
+
+    .navbar-nav-right {
+      margin-left: auto;
+
+      :host-context(.rtl) & {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+
+      .nav-item {
+        .nav-link {
+          color: inherit;
+          font-size: $navbar-font-size;
+          margin-left: 15px;
+          margin-right: 15px;
+          height: 35px;
+
+          @media (max-width: 767px) {
+            margin-left: .8rem;
+            margin-right: .8rem;
+          }
+
+          i {
+            font-size: $navbar-icon-font-size;
+            color: $navbar-menu-icon-color;
+          }
+        }
+      }
+
+      &.navbar-nav-right {
+        @media (min-width: 992px) {
+          margin-left: auto;
+
+          :host-context(.rtl) & {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:991px) {
+  .navbar {
+    flex-direction: row;
+
+    .navbar-brand-wrapper {
+      width: 75px;
+
+      .navbar-brand {
+        &.brand-logo {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  .navbar-collapse {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width:480px) {
+  .navbar {
+    .navbar-brand-wrapper {
+      width: 55px;
+    }
+  }
+}
+
+.navbar-nav .nav-link {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-nav .active>.nav-link {
+  width: 100%;
+  border-bottom: .25rem solid transparent;
+  border-bottom-color: $primary;
+}

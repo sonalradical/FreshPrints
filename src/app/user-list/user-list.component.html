@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header h3">Search Github User</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-9">
+          <ng-select [items]="users$ | async" bindLabel="login" [minTermLength]="2" [loading]="userLoading"
+            [addTag]="true" typeToSearchText="Please enter 3 or more characters" [typeahead]="userInput$"
+            [(ngModel)]="selectedUser">
+          </ng-select>
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-block btn-primary btn-sm" (click)="onSearchUser()">
+            <i class="fa fa-search text-light" aria-hidden="true"></i>
+            <span class="pl-2">Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div *ngIf="user" id="userList">
+          <ul class="list-group pull-down" id="user-list">
+            <li class="list-group-item">
+              <app-user [user]="user"></app-user>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

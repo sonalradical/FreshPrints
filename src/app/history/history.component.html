@@ -1,0 +1,26 @@
+<div class="container pb-2">
+  <div class="card">
+    <div class="card-header h3"> Your Search History
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-group pull-down" id="user-list">
+            <li *ngFor="let user of users" id="userList" class="list-group-item">
+              <app-user [user]="user"></app-user>
+            </li>
+            <li *ngIf="!users || users.length<=0" class="list-group-item">
+              No Record found!
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary btn-sm w-25" (click)="onClearHistory()">
+          Clear Search History
+        </button>
+      </div>
+    </div>
+  </div>

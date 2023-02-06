@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-2 px-0">
+        <img *ngIf="user.isGitUser !== false" [src]=" user.avatar_url" alt="profile-image"
+            class="profile rounded-circle mx-auto d-block img-fluid" />
+    </div>
+    <div class="col-10">
+        <h3 *ngIf="user.isGitUser === false">There is not git user found for <span class="text-info">{{ user.login
+                }}</span> </h3>
+        <a *ngIf="user.isGitUser !== false" target="_blank" class="h3 text-primary" [href]="user.html_url">{{ user.login
+            }}
+        </a>
+        <div class="row">
+            <div class="col-12 px-1">
+                <i class="fa fa-user-o fa-fw text-primary"></i>
+                <b>{{user.followers}}</b> {{user.followers > 1 ? 'followers': 'follower'}}
+                <b>{{user.following}}</b> following
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 px-1 text-dark">
+                <i class="fa fa-github-square fa-fw text-dark"></i>
+                <b>{{user.public_repos}}</b> {{user.public_repos > 1 ? 'public repositories': 'public
+                repository'}}
+            </div>
+        </div>
+        <div class="row" *ngIf="user.bio">
+            <div class="col-12 text-muted small">
+                {{user.bio}}
+            </div>
+        </div>
+    </div>
+</div>

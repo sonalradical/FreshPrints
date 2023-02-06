@@ -1,0 +1,22 @@
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+  <div class="pl-4 text-center d-flex align-items-center justify-content-center">
+    <a class="navbar-brand brand-logo" href="index.html">
+      <img src="assets/images/logo.svg" alt="logo" class="logo-light" />
+    </a>
+  </div>
+  <div class="navbar-menu-wrapper d-flex align-items-center">
+
+    <ul class="navbar-nav  navbar-nav-right">
+      <li>
+        <h5 class="pr-5 mb-0 font-weight-medium d-none d-lg-flex" translate>Welcome to FreshPrints dashboard!</h5>
+      </li>
+      <li class="pr-3 nav-item" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+        <a routerLink="/" class="nav-link">Home
+        </a>
+      </li>
+      <li class="pr-3 nav-item" routerLinkActive="active">
+        <a routerLink="/history" class="nav-link">History</a>
+      </li>
+    </ul>
+  </div>
+</nav>
