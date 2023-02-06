@@ -1,6 +1,6 @@
 /* Navbar */
 
-@import '../../../../styles.scss';
+@import './../../../styles.scss';
 
 /* Navbar */
 
@@ -49,8 +49,8 @@
           height: 35px;
 
           @media (max-width: 767px) {
-            margin-left: .8rem;
-            margin-right: .8rem;
+            margin-left: 0.8rem;
+            margin-right: 0.8rem;
           }
 
           i {
@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .navbar {
     flex-direction: row;
 
@@ -85,7 +85,6 @@
         &.brand-logo {
           display: none;
         }
-
       }
     }
   }
@@ -96,7 +95,7 @@
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .navbar {
     .navbar-brand-wrapper {
       width: 55px;
@@ -110,8 +109,8 @@
   font-size: 18px;
 }
 
-.navbar-nav .active>.nav-link {
+.navbar-nav .active > .nav-link {
   width: 100%;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
   border-bottom-color: $primary;
 }
